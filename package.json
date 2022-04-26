@@ -1,0 +1,19 @@
+{
+  "name": "fylo-data-component",
+  "version": "1.0.0",
+  "description": "A data storage component",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://CarolineLienard@github.com/CarolineLienard/Fylo-Data-Component.git"
+  },
+  "author": "Caroline Lienard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarolineLienard/Fylo-Data-Component/issues"
+  },
+  "homepage": "https://github.com/CarolineLienard/Fylo-Data-Component#readme"
+}
