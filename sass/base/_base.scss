@@ -1,10 +1,20 @@
 body {
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Raleway";
+    font-size: 1em;
+    color: $paleBlue;
     background-color: $veryDarkBlue;
     background-image: url("../../images/bg-desktop.png");
     background-repeat: no-repeat;
     background-position: bottom;
     @include mobile {
-        
+        background-image: url("../../images/bg-mobile.png");
     }
+}
+
+h1 {
+    font-size: 1em;
 }

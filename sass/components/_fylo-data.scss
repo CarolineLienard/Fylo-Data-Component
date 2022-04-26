@@ -1,0 +1,100 @@
+main {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    .fylo-main {
+        background-color: $darkBlue;
+        box-shadow: 0px 75px 100px -30px rgba(0, 0, 0, 0.24776);
+        border-radius: 10px 100px 10px 10px;
+        width: 21.8em;
+        height: 12.6em;
+        &__title {
+            padding: 2.5em 0em 0em 2.6em;
+        }
+        &__icon {
+            width: 11em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 2em 0em 2.5em 2.6em;
+            div {
+                background-color: $veryDarkBlue;
+                border-radius: 10px;
+                width: 3em;
+                height: 3em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+    .fylo-progress {
+        background-color: $darkBlue;
+        box-shadow: 0px 75px 100px -30px rgba(0, 0, 0, 0.24776);
+        border-radius: 10px;
+        width: 540px;
+        height: 154px;
+        position: relative;
+        h1 {
+            font-weight: 400;
+            span {
+                font-weight: 700;
+            }
+        }
+        &__bubble {
+            background-color: white;
+            box-shadow: 0px 75px 100px -30px rgba(0, 0, 0, 0.24776);
+            border-radius: 10px 10px 0px 10px;
+            position: absolute;
+            right: 2em;
+            margin-top: -3em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 90%;
+                right: 0;
+                border-width: 30px 0 0 30px;
+                border-style: solid;
+                border-color: white transparent;
+            }
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 1em 1.5em 1em 1.5em;
+                span {
+                    color: $veryDarkBlue;
+                    font-weight: 700;
+                }
+                span:nth-child(1) {
+                    font-size: 2.5em;
+                }
+                span:nth-child(2) {
+                    opacity: 0.5;
+                    font-size: 0.7em;
+                    margin-left: 0.9em;
+                }
+            }
+        }
+        &__bar {
+            &--container {
+                background-color: rgba($veryDarkBlue, $alpha: 0.5);
+                mix-blend-mode: normal;
+                border-radius: 10px;
+                width: 459px;
+                height: 20px;
+                display: flex;
+                align-items: center;
+                .circle {
+                    background-color: white;
+                    border-radius: 50%;
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+    }
+}
