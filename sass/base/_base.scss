@@ -1,0 +1,10 @@
+body {
+    min-height: 100vh;
+    background-color: $veryDarkBlue;
+    background-image: url("../../images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    @include mobile {
+        
+    }
+}

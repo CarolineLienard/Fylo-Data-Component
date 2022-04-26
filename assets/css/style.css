@@ -2,5 +2,13 @@
 /** Primary **/
 /** Neutral **/
 /** Breakpoint **/
+/** Responsive mixins **/
+body {
+  min-height: 100vh;
+  background-color: hsl(229deg, 57%, 11%);
+  background-image: url("../../images/bg-desktop.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
 
 /*# sourceMappingURL=style.css.map */

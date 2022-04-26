@@ -11,5 +11,4 @@ $darkBlue: hsl(228, 56%, 26%);
 $veryDarkBlue: hsl(229, 57%, 11%);
 
 /** Breakpoint **/
-$mobile: 375px;
-$desktop: 1440px;
+$breakpoints: ( mobile: 375px, ipad: 990px, desktop: 1440px );      
