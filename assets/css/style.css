@@ -24,12 +24,20 @@ body {
 
 h1 {
   font-size: 1em;
+  margin: 0;
 }
 
 main {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+}
+@media screen and (max-width: 990px) {
+  main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 main .fylo-main {
   background-color: hsl(228deg, 56%, 26%);
@@ -62,14 +70,20 @@ main .fylo-progress {
   box-shadow: 0px 75px 100px -30px rgba(0, 0, 0, 0.24776);
   border-radius: 10px;
   width: 540px;
-  height: 154px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 30px;
+  padding: 2.5em 2.4em 2.5em 2.4em;
 }
-main .fylo-progress h1 {
-  font-weight: 400;
-}
-main .fylo-progress h1 span {
-  font-weight: 700;
+@media screen and (max-width: 990px) {
+  main .fylo-progress {
+    width: 78%;
+    margin-left: 0;
+    margin-top: 1em;
+  }
 }
 main .fylo-progress__bubble {
   background-color: white;
@@ -77,10 +91,17 @@ main .fylo-progress__bubble {
   border-radius: 10px 10px 0px 10px;
   position: absolute;
   right: 2em;
-  margin-top: -3em;
+  margin-top: -11em;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 990px) {
+  main .fylo-progress__bubble {
+    border-radius: 10px;
+    right: 6em;
+    bottom: -2.5em;
+  }
 }
 main .fylo-progress__bubble::after {
   content: "";
@@ -91,11 +112,16 @@ main .fylo-progress__bubble::after {
   border-style: solid;
   border-color: white transparent;
 }
+@media screen and (max-width: 990px) {
+  main .fylo-progress__bubble::after {
+    display: none;
+  }
+}
 main .fylo-progress__bubble div {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1em 1.5em 1em 1.5em;
+  padding: 0.8em 1.6em 0.8em 1.6em;
 }
 main .fylo-progress__bubble div span {
   color: hsl(229deg, 57%, 11%);
@@ -109,20 +135,50 @@ main .fylo-progress__bubble div span:nth-child(2) {
   font-size: 0.7em;
   margin-left: 0.9em;
 }
+main .fylo-progress__bar {
+  width: 100%;
+}
+main .fylo-progress__bar h1 {
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+main .fylo-progress__bar h1 span {
+  font-weight: 700;
+}
 main .fylo-progress__bar--container {
   background-color: rgba(12, 18, 44, 0.5);
   mix-blend-mode: normal;
   border-radius: 10px;
-  width: 459px;
-  height: 20px;
+  width: 100%;
+  height: 1.2em;
+  display: flex;
+  align-items: center;
+  padding: 0em 0.2em 0em 0.2em;
+  margin-bottom: 0.5em;
+}
+main .fylo-progress__bar--container .gradient {
+  background: linear-gradient(90deg, hsl(6deg, 100%, 80%) 0%, hsl(335deg, 100%, 65%) 100%);
+  width: 56%;
+  height: 0.85em;
+  border-radius: 8px;
+  position: relative;
   display: flex;
   align-items: center;
 }
-main .fylo-progress__bar--container .circle {
+main .fylo-progress__bar--container .gradient .circle {
   background-color: white;
   border-radius: 50%;
   width: 10px;
   height: 10px;
+  position: absolute;
+  right: 0.2em;
+  z-index: 1;
+}
+main .fylo-progress__bar--title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75em;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
