@@ -1,23 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Caroline Lienard | Fylo data storage component</title>
-  <link rel="stylesheet" href="./assets/css/normalize.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caroline Lienard | Fylo data storage component</title>
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <div class="fylo-main">
+        <div class="fylo-main__title">
+          <img src="./images/logo.svg" alt="">
+        </div>
+        <div class="fylo-main__icon">
+          <div>
+            <img src="./images/icon-document.svg" alt="">
+          </div>
+          <div>
+            <img src="./images/icon-folder.svg" alt="">
+          </div>
+          <div>
+            <img src="./images/icon-upload.svg" alt="">
+          </div>
+        </div>
+      </div>
 
-  You’ve used 815 GB of your storage
-
-  185 GB Left
-  
-  0 GB
-  1000 GB
-  
-</body>
+      <div class="fylo-progress">
+        <div class="fylo-progress__bubble">
+          <div>
+            <span>185 GB</span>
+            <span>Left</span>
+          </div>
+          <h1>You’ve used 815 GB of your storage</h1>
+        </div>
+        <div class="fylo-progress__bar">
+          <div class="fylo-progress__bar--container">
+            <div class="circle">
+            </div>
+            <div class="gradient">
+            </div>
+          </div>
+          <div class="fylo-progress__bar--title">
+            <span>0 GB</span>
+            <span>1000 GB</span>
+          </div>
+        </div>
+      </div>
+      
+    </main>
+  </body>
 </html>
