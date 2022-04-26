@@ -27,6 +27,14 @@ h1 {
   margin: 0;
 }
 
+button {
+  margin: 0;
+  line-height: 0;
+  text-decoration: none;
+  border: none;
+  padding: 0;
+}
+
 main {
   display: flex;
   align-items: flex-end;
@@ -56,7 +64,7 @@ main .fylo-main__icon {
   justify-content: space-between;
   margin: 2em 0em 2.5em 2.6em;
 }
-main .fylo-main__icon div {
+main .fylo-main__icon button {
   background-color: hsl(229deg, 57%, 11%);
   border-radius: 10px;
   width: 3em;
@@ -64,18 +72,25 @@ main .fylo-main__icon div {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+main .fylo-main__icon button:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
 }
 main .fylo-progress {
   background-color: hsl(228deg, 56%, 26%);
   box-shadow: 0px 75px 100px -30px rgba(0, 0, 0, 0.24776);
   border-radius: 10px;
-  width: 540px;
+  width: 33.5em;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-left: 30px;
+  margin-left: 1.9em;
   padding: 2.5em 2.4em 2.5em 2.4em;
 }
 @media screen and (max-width: 990px) {
