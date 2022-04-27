@@ -47,7 +47,7 @@
 
         <div class="fylo-progress__bubble">
           <div>
-            <span id="gbLeft">0 GB</span>
+            <span id="gbLeft">0</span>
             <span>GB LEFT</span>
           </div>
         </div>
@@ -61,7 +61,7 @@
           </div>
           <div class="fylo-progress__bar--title">
             <span >0 GB</span>
-            <span>1000 GB</span>
+            <span>100 GB</span>
           </div>
         </div>
       </div>
@@ -71,18 +71,18 @@
         let gbUsed = document.getElementById("gbUsed"); 
         let gradient = document.getElementById("gradient");
         let gbLeft = document.getElementById("gbLeft");
-        let currentWidth = 30;
+        let currentWidth = 6;
         let id = setInterval(
           ()=> {
-            if (currentWidth >= 1000) {
+            if (currentWidth >= 100) {
             clearInterval(id);
           } else {
             currentWidth++
-            let difference = 1000 - currentWidth;
-            gradient.style.width = currentWidth / 10 + "%";
+            let difference = 100 - currentWidth;
+            gradient.style.width = currentWidth + "%";
             gbUsed.innerHTML = currentWidth  + "GB";
             gbLeft.innerHTML = difference;
-          }}, 100);
+          }}, 200);
       }, 5000)
     </script>
   </body>

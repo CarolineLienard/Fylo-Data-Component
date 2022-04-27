@@ -82,6 +82,9 @@ main {
                 right: 6em;
                 bottom: -2.5em;
             }
+            @include mobile {
+                right: 7em;
+            }
             &::after {
                 content: "";
                 position: absolute;

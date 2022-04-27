@@ -211,6 +211,11 @@ main .fylo-progress__bubble:hover {
     bottom: -2.5em;
   }
 }
+@media screen and (max-width: 375px) {
+  main .fylo-progress__bubble {
+    right: 7em;
+  }
+}
 main .fylo-progress__bubble::after {
   content: "";
   position: absolute;
