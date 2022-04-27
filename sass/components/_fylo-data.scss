@@ -14,7 +14,7 @@ main {
         width: 21.8em;
         height: 12.6em;
         opacity: 0;
-        animation: appear 0.5s ease 7.2s forwards;
+        animation: appear 0.5s ease 2.9s forwards;
         &__title {
             padding: 2.5em 0em 0em 2.6em;
         }
@@ -55,7 +55,7 @@ main {
         margin-left: 1.9em;
         padding: 2.5em 2.4em 2.5em 2.4em;
         opacity: 0;
-        animation: appear 0.5s ease 7.5s forwards;
+        animation: appear 0.5s ease 3.4s forwards;
         @include ipad {
             width: 78%;
             margin-left: 0;
@@ -132,22 +132,26 @@ main {
                 align-items: center;
                 padding: 0em 0.2em 0em 0.2em;
                 margin-bottom: 0.5em;
+                overflow: hidden;
                 .gradient {
                     background: linear-gradient(90deg, $gradient 0%, $toGradient 100%);
-                    width: 56%;
+                    width: 3%;
                     height: 0.85em;
                     border-radius: 8px;
-                    position: relative;
                     display: flex;
                     align-items: center;
+                    position: relative;
+                    @include ipad {
+                        width: 6%;
+                    }
                     .circle {
+                        position: absolute;
                         background-color: white;
                         border-radius: 50%;
                         width: 10px;
                         height: 10px;
-                        position: absolute;
-                        right: 0.2em;
                         z-index: 1;
+                        right: 3px;
                     }
                 }
             }

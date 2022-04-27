@@ -38,30 +38,41 @@ button {
     top: 0;
     left: 0;
     position: fixed;
-    background-color: $darkBlue;
-    overflow: hidden;
-    animation: dis linear 0.8s forwards 6.5s;
+    background: linear-gradient(90deg, $veryDarkBlue 0%, $darkBlue 100%);
+    animation: dis 0.3s forwards 2.6s;
     div {
         display: flex;
         justify-content: center;
         align-items: center;
-        &::after {
-            content: "";
-            background-color: $veryDarkBlue;
-            height: 400%;
-            width: 210%;
-            border-radius: 35%;
-            position: absolute;
-            bottom: -50%;
-            left: -50%;
-            animation: spin 12s ease-in-out;
+        #main-logo {
+            width: 6em;
+            opacity: 0;
+            animation: icon 0.8s ease-in-out 0.5s forwards;
         }
-        img {
-            width: 225px;
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-right: 2em;
+            transform: scale(1.6);
+            #first-icon {
+                margin-top: -7px;
+                opacity: 0;
+                animation: icon 0.8s ease-in-out 0.5s forwards;
+            }
+            #second-icon {
+                opacity: 0;
+                margin-top: -7px;
+                animation: icon 0.8s ease-in-out 0.7s forwards;
+            }
+            #third-icon {
+                opacity: 0;
+                margin-top: -3px;
+                animation: icon 0.8s ease-in-out 0.9s forwards;
+            }
         }
     }
-
-
 }
 
 

@@ -1,4 +1,4 @@
-/** introduction animation **/
+/** ntroduction animation **/
 @keyframes spin {
     0% {
         transform: translateY(0) rotate(0deg);
@@ -8,16 +8,18 @@
     }
 }
 
-@keyframes dis {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    75% {
+@keyframes icon {
+    0%{
+        transform: translateY(-30px);
         opacity: 0;
     }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+ }
+
+@keyframes dis {
     100% {
         opacity: 0;
         visibility: hidden;

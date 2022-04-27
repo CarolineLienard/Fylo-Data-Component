@@ -14,7 +14,15 @@
     <main>
       <div class="loader">
         <div>
-          <img src="./images/logo.svg" alt="">
+
+          <div class="icon">
+            <img id="third-icon" src="./images/fylo-3.svg">
+            <img id="second-icon" src="./images/fylo-1.svg">
+            <img id="first-icon" src="./images/fylo-1.svg">
+          </div>
+
+          <img id="main-logo" src="./images/fylo-main.svg" alt="">
+          
         </div>
         <span></span>     
       </div>
@@ -39,26 +47,43 @@
 
         <div class="fylo-progress__bubble">
           <div>
-            <span>185</span>
+            <span id="gbLeft">0 GB</span>
             <span>GB LEFT</span>
           </div>
         </div>
 
         <div class="fylo-progress__bar">
-          <h1>You’ve used <span>815 GB</span> of your storage</h1>
+          <h1>You’ve used <span id="gbUsed">0 GB</span> of your storage</h1>
           <div class="fylo-progress__bar--container">
-            <div class="gradient">
-              <div class="circle">
-              </div>
+            <div id="gradient" class="gradient">
+              <div id="circle" class="circle"></div>
             </div>
           </div>
           <div class="fylo-progress__bar--title">
-            <span>0 GB</span>
+            <span >0 GB</span>
             <span>1000 GB</span>
           </div>
         </div>
       </div>
-
     </main>
+    <script>
+      setTimeout( ()=> {
+        let gbUsed = document.getElementById("gbUsed"); 
+        let gradient = document.getElementById("gradient");
+        let gbLeft = document.getElementById("gbLeft");
+        let currentWidth = 30;
+        let id = setInterval(
+          ()=> {
+            if (currentWidth >= 1000) {
+            clearInterval(id);
+          } else {
+            currentWidth++
+            let difference = 1000 - currentWidth;
+            gradient.style.width = currentWidth / 10 + "%";
+            gbUsed.innerHTML = currentWidth  + "GB";
+            gbLeft.innerHTML = difference;
+          }}, 100);
+      }, 5000)
+    </script>
   </body>
 </html>
