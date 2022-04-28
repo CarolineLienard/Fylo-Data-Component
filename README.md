@@ -1,4 +1,4 @@
-# Fylo Data Storage Component 💾
+# Fylo Data Storage Component 📦
 # A Project with HTML and CSS
 
 This is my solution to the first project of the Data Storage component Frontend mentor's challenge. This project is really nice if you want to test your CSS skills.
